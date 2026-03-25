@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Clientes — Fogo e Lucro{% endblock %}
+
+{% block content %}
+<div class="page-title">👥 Gerenciar <span class="accent">Clientes</span></div>
+
+<div class="grid-2">
+
+  <!-- Formulário -->
+  <div class="card" style="align-self:start;">
+    <div class="card-title">➕ Novo Cliente</div>
+    <form method="POST" action="{{ url_for('clientes_adicionar') }}">
+      <div class="form-group">
+        <label for="nome">Nome do cliente</label>
+        <input type="text" id="nome" name="nome" class="form-control"
+               placeholder="Ex: Restaurante Bella Vista" required autofocus>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Adicionar Cliente</button>
+    </form>
+  
+  
+  
+  
+  
+        </div>
+    {% else %}
+    <div class="empty-state">
+      <div class="empty-icon">👥</div>
+      <p>Nenhum cliente cadastrado ainda.</p>
+    </div>
+    {% endif %}
+  
+  
+  
+  
+  
+</div>
+{%}�
+
+  
+{% endblock %}
